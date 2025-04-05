@@ -21,7 +21,9 @@
 
         <div class="container">
             <h2 class="fs-4 fw-bold ms-4 mb-4 text-center">Paling Populer</h2>
+            <!-- ubah menjadi 6 baris row-cols-lg-6 -->
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-6 g-3">
+                <!-- end -->
                 @foreach ($popularBooks as $popularBook)
                 <a href="{{ route('preview', $popularBook) }}" class="col text-dark text-decoration-none">
                     <div class="card shadow border-0 h-100">
@@ -67,6 +69,8 @@
         </div>
     </section>
 
+    <!-- tambah view all -->
+
     <section class="py-5 card container border-0 shadow mb-4">
         <h2 class="fs-4 fw-bold ms-4 mb-4 text-center">Semua</h2>
 
@@ -91,4 +95,6 @@
             </div>
         </div>
     </section>
+
+    <!-- end -->
 </x-app-layout>

@@ -49,12 +49,13 @@
                 <i class="fas fa-fw fa-paste"></i>
                 <span>Pengembalian</span></a>
         </li>
-
+        <!-- tampilan logout sidebar -->
         <li class="nav-item">
             <a class="nav-link" href="{{ route('logout') }}">
                 <i class="fas fa-fw fa-sign-out-alt"></i>
                 <span>Logout</span></a>
         </li>
+        <!-- end -->
     @endif
 
     <!-- Sidebar Toggler (Sidebar) -->

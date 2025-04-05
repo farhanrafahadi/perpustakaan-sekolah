@@ -16,17 +16,19 @@ class HomeController extends Controller
             ->orderBy('borrows_count', 'desc')
             ->limit(6)
             ->get();
-
+            
         $newestBooks = Book::query()
-            ->select('id', 'title', 'writer', 'cover', 'created_at')
+            ->select('id', 'title', 'writer', 'cover', 'created_at') // menambahkan writer
             ->latest('id')
             ->limit(6)
             ->get();
 
+        // menambahkan view all
         $AllBooks = Book::query()
             ->select('id', 'title', 'writer', 'cover', 'created_at')
             ->latest('id')
             ->get();
+        // end
 
         return view('home')->with([
             'popularBooks' => $popularBooks,

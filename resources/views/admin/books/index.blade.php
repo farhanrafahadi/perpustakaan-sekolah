@@ -12,7 +12,9 @@
             <x-admin.search url="{{ route('admin.books.index') }}" placeholder="Cari buku..." />
 
             <div class="table-responsive">
+                <!-- ubah table -->
                 <table class="table table-striped align-middle text-nowrap">
+                    <!-- end -->
                     <thead>
                         <tr>
                             <th>Cover</th>
@@ -50,6 +52,7 @@
                                         @break
                                     @endswitch
                                 </td>
+                                <!-- ubah menjadi button -->
                                 <td>
                                     <a href="{{ route('admin.books.edit', $book) }}"
                                         class="btn btn-warning btn-sm">Edit</a>
@@ -62,6 +65,7 @@
                                         <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
                                     </form>
                                 </td>
+                                <!-- end -->
                             </tr>
                             @empty
                                 <tr>

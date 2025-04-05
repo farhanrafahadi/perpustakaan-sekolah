@@ -26,8 +26,9 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
+    // ubah menjadi get
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-
+    // end
     Route::resource('/my-books', MyBookController::class)->only('index', 'update');
     Route::post('/my-books/{book}', [MyBookController::class, 'store'])->name('my-books.store');
 
